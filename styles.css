@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('tictactoe.jpg'); /* Update this path */
+    background-size: cover;
+    font-family: 'Garamond', serif;
+    color: white;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    background: rgba(217, 59, 241, 0.9); /* Semi-transparent dark background */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Yellow color for the heading */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    color: #333333; /* Dark color for X and O */
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.winning-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(29, 5, 250);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    border-radius: 10px;
+}
+
+.winning-message button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: skyblue;  /* Cyan color for the button */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.winning-message button:hover {
+    background-color: rgb(87, 191, 232);
+}
